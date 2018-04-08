@@ -19,7 +19,7 @@ $ cookiecutter https://github.com/tox-dev/cookiecutter-tox-plugin
 Cookiecutter prompts you for information regarding your plugin:
 
 ```no-highlight
-full_name [Oliver Bestwalter]: Andreas Pelme
+full_name [Oliver Bestwalter]: Somebody Elsewhere
 email [oliver@bestwalter.de]: somebody@elsewhere.com
 github_username [obestwalter]: otheruser
 plugin_name [foobar]: awesome
