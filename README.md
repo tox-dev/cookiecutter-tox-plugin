@@ -1,0 +1,140 @@
+# cookiecutter tox plugin
+
+[![See Build Status on Travis CI][travis_badge]][travis]
+[![Documentation Status][docs_badge]][documentation]
+
+Minimal [Cookiecutter] template for authoring [tox] plugins to change or extend the behaviour of tox.
+
+> This template requires [Cookiecutter 1.4.0 "Shortbread"][Shortbread] or higher
+
+## Getting Started
+
+Install [Cookiecutter] and generate a new tox plugin project:
+
+```no-highlight
+$ pip install cookiecutter
+$ cookiecutter https://github.com/tox-dev/cookiecutter-tox-plugin
+```
+
+Cookiecutter prompts you for information regarding your plugin:
+
+```no-highlight
+full_name [Oliver Bestwalter]: Andreas Pelme
+email [oliver@bestwalter.de]: somebody@elsewhere.com
+github_username [obestwalter]: otheruser
+plugin_name [foobar]: awesome
+short_description [A simple plugin to extend tox]:
+version [0.1.0]:
+tox_version [3.0.0]:
+Select docs_tool:
+1 - mkdocs
+2 - sphinx
+3 - none
+Choose from 1, 2, 3 [1]: 1
+Select license:
+1 - MIT
+2 - BSD-3
+3 - GNU GPL v3.0
+Choose from 1, 2, 3 [1]: 2
+INFO:post_gen_project:Moving files for mkdocs.
+```
+
+There you go - you just created a minimal tox plugin:
+
+```no-highlight
+tox-awesome/
+├── LICENSE
+├── README.rst
+├── docs
+│   └── index.md
+├── mkdocs.yml
+├── tox_awesome.py
+├── setup.py
+├── tests
+│   ├── conftest.py
+│   └── test_awesome.py
+└── tox.ini
+```
+
+
+## Features
+
+- Installable [PyPI] package featuring a `setup.py`.
+- Test suite running [tox] and [Pytest] that makes sure your plugin is working as expected
+- Comprehensive `README.rst` file that contains useful information about your
+  plugin
+- Continuous integration configuration for [Travis CI] and [AppVeyor]
+- Optional documentation with either [Sphinx] or [MkDocs]
+- Choose from several licenses, such as [MIT], [BSD-3], [Apache v2.0], [GNU GPL v3.0], or [MPL v2.0]
+
+## Requirements to Submit a Plugin
+
+If you plan on submitting your plugin to the [tox-dev organization] you need
+to meet the following requirements:
+
+-   PyPI presence with a setup.py that contains a license, tox-
+    prefixed, version number, authors, short and long description.
+-   a tox.ini for running tests using tox.
+-   a README describing how to use the plugin and on which platforms
+    it runs.
+-   a LICENSE file or equivalent containing the licensing information,
+    with matching info in setup.py.
+-   an issue tracker.
+
+Please see the official guidelines at [Submit a Plugin].
+
+## Resources
+
+Please consult the [tox] docs for more information on hooks at
+[tox plugin/hooks reference].
+
+## Contribute
+
+We welcome you to contribute to this project. Please visit the
+[documentation] to get started!
+
+## Issues
+
+If you encounter any problems, please [file an issue] along with a
+detailed description.
+
+## Code of Conduct
+
+Everyone interacting in the cookiecutter tox plugin project's codebases,
+issue trackers, chat rooms, and mailing lists is expected to follow the [PyPA
+Code of Conduct].
+
+## License
+
+Distributed under the terms of the [MIT license], cookiecutter tox
+plugin is free and open source software
+
+[![OSI certified][osi_certified]][OSI]
+
+
+  [tox-dev organization]: https://github.com/tox-dev/
+  [travis_badge]: https://travis-ci.org/tox-dev/cookiecutter-tox-plugin.svg?branch=master
+  [travis]: https://travis-ci.org/tox-dev/cookiecutter-tox-plugin (See Build Status on Travis CI)
+  [docs_badge]: https://readthedocs.org/projects/cookiecutter-tox-plugin/badge/?version=latest
+  [documentation]: https://cookiecutter-tox-plugin.readthedocs.io/en/latest/ (Documentation)
+  [Cookiecutter]: https://github.com/audreyr/cookiecutter
+  [Pytest]: https://github.com/tox-dev/pytest
+  [PyPI]: https://pypi.org
+  [tox]: https://tox.readthedocs.io/en/latest/
+  [Submit a Plugin]: https://github.com/tox-dev/tox/blob/master/CONTRIBUTING.rst
+  [tox plugin/hooks reference]: http://tox.readthedocs.io/en/latest/plugins.html
+  [MIT license]: http://opensource.org/licenses/MIT
+  [file an issue]: https://github.com/tox-dev/cookiecutter-tox-plugin/issues
+  [Sphinx]: http://sphinx-doc.org/
+  [MkDocs]: http://www.mkdocs.org/
+  [MIT]: http://opensource.org/licenses/MIT
+  [MPL v2.0]: https://www.mozilla.org/media/MPL/2.0/index.txt
+  [BSD-3]: http://opensource.org/licenses/BSD-3-Clause
+  [GNU GPL v3.0]: http://www.gnu.org/licenses/gpl-3.0.txt
+  [Apache v2.0]: http://www.apache.org/licenses/LICENSE-2.0
+  [Travis CI]: https://travis-ci.com/
+  [AppVeyor]: http://www.appveyor.com/
+  [PyPA Code of Conduct]: https://www.pypa.io/en/latest/code-of-conduct/
+  [Shortbread]: https://github.com/audreyr/cookiecutter/releases/tag/1.4.0
+  [osi_certified]: https://opensource.org/trademarks/osi-certified/web/osi-certified-120x100.png
+  [OSI]: https://opensource.org/

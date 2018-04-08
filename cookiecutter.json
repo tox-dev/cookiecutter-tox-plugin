@@ -1,0 +1,18 @@
+{
+    "full_name": "Oliver Bestwalter",
+    "email": "oliver@bestwalter.de",
+    "github_username": "obestwalter",
+    "plugin_name": "foobar",
+    "module_name": "{{ cookiecutter.plugin_name|lower|replace('-', '_') }}",
+    "short_description": "A simple plugin to use with tox",
+    "version": "0.1.0",
+    "tox_version": "3.0.0",
+    "docs_tool": ["mkdocs", "sphinx", "none"],
+    "license": [
+        "MIT",
+        "BSD-3",
+        "GNU GPL v3.0",
+        "Apache Software License 2.0",
+        "Mozilla Public License 2.0"
+    ]
+}
