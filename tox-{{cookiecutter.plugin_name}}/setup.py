@@ -27,7 +27,6 @@ setup(
     install_requires=['tox>={{cookiecutter.tox_version}}'],
     classifiers=[
         'Development Status :: 4 - Beta',
-        'Framework :: Pytest',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Testing',
         'Programming Language :: Python',
