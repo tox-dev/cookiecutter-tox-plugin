@@ -3,7 +3,7 @@
 
 import os
 import codecs
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -13,18 +13,19 @@ def read(fname):
 
 setup(
     name='tox-{{cookiecutter.plugin_name}}',
+    description='{{cookiecutter.short_description}}',
+    long_description=read('README.rst'),
     version='{{cookiecutter.version}}',
     author='{{cookiecutter.full_name}}',
     author_email='{{cookiecutter.email}}',
     maintainer='{{cookiecutter.full_name}}',
     maintainer_email='{{cookiecutter.email}}',
-    license='{{cookiecutter.license}}',
     url='https://github.com/{{cookiecutter.github_username}}/tox-{{cookiecutter.plugin_name}}',
-    description='{{cookiecutter.short_description}}',
-    long_description=read('README.rst'),
-    py_modules=['tox_{{cookiecutter.module_name}}'],
+    packages=find_packages(),
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
     install_requires=['tox>={{cookiecutter.tox_version}}'],
+    entry_points={'tox': ['{{cookiecutter.plugin_name}} = {{cookiecutter.entry_point}}']},
+    license='{{cookiecutter.license}}',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -51,9 +52,4 @@ setup(
         'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
         {%- endif %}
     ],
-    entry_points={
-        'pytest11': [
-            '{{cookiecutter.plugin_name}} = tox_{{cookiecutter.module_name}}',
-        ],
-    },
 )
