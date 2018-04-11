@@ -1,7 +1,6 @@
-# cookiecutter tox plugin
+[![Travis CI Build Status][travis_badge]][travis] [![Documentation Status][docs_badge]][documentation]
 
-[![See Build Status on Travis CI][travis_badge]][travis]
-[![Documentation Status][docs_badge]][documentation]
+# Cookiecutter tox plugin
 
 Minimal [Cookiecutter] template for authoring [tox] plugins to change or extend the behaviour of tox.
 
