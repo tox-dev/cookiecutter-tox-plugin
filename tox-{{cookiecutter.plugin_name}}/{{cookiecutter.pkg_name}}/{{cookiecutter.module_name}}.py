@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import logging
 
 from tox import hookimpl
@@ -6,10 +7,14 @@ from tox import hookimpl
 log = logging.getLogger('{{cookiecutter.plugin_name}}')
 
 
+@hookimpl
 def tox_addoption(parser):
-    parser.add_argument('--my-option', action='store', default="default value", help='my option')
+    """Add a command line option for later use"""
+    parser.add_argument(
+        '--my-opt', action='store', help='my custom option')
 
 
 @hookimpl
 def tox_configure(config):
-    log.info("my option is: '%s'", config.option.my_option)
+    """Access your option during configuration"""
+    log.info("my option is: '%s'", config.option.my_opt)
