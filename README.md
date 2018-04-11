@@ -40,6 +40,7 @@ Select license:
 4 - Apache Software License 2.0
 5 - Mozilla Public License 2.0
 Choose from 1, 2, 3, 4, 5 [1]: 
+
 INFO:post_gen_project:Initializing docs for mkdocs
 INFO:post_gen_project:Moving doc_sources/mkdocs/index.md to docs/index.md.
 INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to /home/ob/do/tox-dev/tox-foobar/mkdocs.yml.

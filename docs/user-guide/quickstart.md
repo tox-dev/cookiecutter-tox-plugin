@@ -34,13 +34,35 @@ or markdown formats.
 Cookiecutter prompts you for information regarding your plugin based on aforementioned variables:
 
 ```no-highlight
-full_name [Oliver Bestwalter]: Andreas Pelme
-email [oliver@bestwalter.de]: andreas@pelme.se
-github_username [obestwalter]: pelme
+full_name [Oliver Bestwalter]: Somebody Else
+email [oliver@bestwalter.de]: somebody@elsewhere.com
+github_username [obestwalter]: somebody_else
 plugin_name [foobar]: awesome
-short_description [A simple plugin to use with Pytest]:
-version [0.1.0]:
-tox_version [3.0.0]: 2.9.1
+pkg_name [tox_foobar]: 
+module_name [plugin]: 
+entry_point [tox_foobar.plugin]: 
+short_description [A simple plugin to use with tox]: 
+version [0.1.0]: 
+tox_version [3.0.0]: 
+Select docs_tool:
+1 - mkdocs
+2 - sphinx
+3 - none
+Choose from 1, 2, 3 [1]:
+Select license:
+1 - MIT
+2 - BSD-3
+3 - GNU GPL v3.0
+4 - Apache Software License 2.0
+5 - Mozilla Public License 2.0
+Choose from 1, 2, 3, 4, 5 [1]: 
+
+INFO:post_gen_project:Initializing docs for mkdocs
+INFO:post_gen_project:Moving doc_sources/mkdocs/index.md to docs/index.md.
+INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to /home/ob/do/tox-dev/tox-foobar/mkdocs.yml.
+INFO:post_gen_project:Remove temporary folder: doc_sources
+INFO:post_gen_project:Remove temporary folder: licenses
+INFO:post_gen_project:Remove temporary folder: macros
 ```
 
 The values in the square brackets (f.i. ``[foobar]``) are defaults for the according variables.
@@ -52,13 +74,20 @@ Once you answered to the questions, Cookiecutter renders the the project:
 ```no-highlight
 tox-awesome/
 ├── LICENSE
+├── MANIFEST.in
 ├── README.rst
-├── pytest_awesome.py
+├── appveyor.yml
+├── docs
+│   └── index.md
+├── mkdocs.yml
 ├── setup.py
 ├── tests
 │   ├── conftest.py
-│   └── test_awesome.py
-└── tox.ini
+│   └── test_tox_awesome.py
+├── tox.ini
+└── tox_awesome
+    ├── __init__.py
+    └── plugin.py
 ```
 
 There you go - you just created a minimal tox plugin:
