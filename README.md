@@ -53,18 +53,19 @@ There you go - you just created a minimal tox plugin:
 
 ```no-highlight
 tox-awesome/
+├── tox.ini
+├── .travis.yml
+├── appveyor.yml
+├── mkdocs.yml
 ├── LICENSE
 ├── MANIFEST.in
 ├── README.rst
-├── appveyor.yml
 ├── docs
 │   └── index.md
-├── mkdocs.yml
 ├── setup.py
 ├── tests
 │   ├── conftest.py
 │   └── test_tox_awesome.py
-├── tox.ini
 └── tox_awesome
     ├── __init__.py
     └── plugin.py
