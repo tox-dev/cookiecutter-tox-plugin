@@ -69,7 +69,7 @@ The values in the square brackets (f.i. ``[foobar]``) are defaults for the accor
 
 ## Project Generation
 
-Once you answered to the questions, Cookiecutter renders the the project:
+Once you answered the questions, Cookiecutter renders the the project:
 
 ```no-highlight
 tox-awesome/
