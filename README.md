@@ -135,7 +135,7 @@ plugin is free and open source software
   [Pytest]: https://github.com/tox-dev/pytest
   [PyPI]: https://pypi.org
   [tox]: https://tox.readthedocs.io/en/latest/
-  [Submit a Plugin]: https://github.com/tox-dev/tox/blob/master/CONTRIBUTING.rst
+  [Submit a Plugin]: https://github.com/tox-dev/tox/blob/master/CONTRIBUTING.rst#submitting-plugins-to-tox-dev
   [tox plugin/hooks reference]: http://tox.readthedocs.io/en/latest/plugins.html
   [MIT license]: http://opensource.org/licenses/MIT
   [file an issue]: https://github.com/tox-dev/cookiecutter-tox-plugin/issues
