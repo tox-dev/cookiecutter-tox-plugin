@@ -4,14 +4,12 @@
 
 Minimal [Cookiecutter] template for authoring [tox] plugins to change or extend the behaviour of tox.
 
-> This template requires [Cookiecutter 1.4.0 "Shortbread"][Shortbread] or higher
-
 ## Getting Started
 
 Install [Cookiecutter] and generate a new tox plugin project:
 
 ```no-highlight
-$ pip install cookiecutter
+$ pip install -U cookiecutter
 $ cookiecutter https://github.com/tox-dev/cookiecutter-tox-plugin
 ```
 
@@ -22,12 +20,12 @@ full_name [Oliver Bestwalter]: Somebody Else
 email [oliver@bestwalter.de]: somebody@elsewhere.com
 github_username [obestwalter]: somebody_else
 plugin_name [foobar]: awesome
-pkg_name [tox_foobar]: 
-module_name [plugin]: 
-entry_point [tox_foobar.plugin]: 
-short_description [A simple plugin to use with tox]: 
-version [0.1.0]: 
-tox_version [3.0.0]: 
+pkg_name [tox_foobar]:
+module_name [plugin]:
+entry_point [tox_foobar.plugin]:
+short_description [A simple plugin to use with tox]:
+version [0.1.0]:
+tox_version [3.0.0]:
 Select docs_tool:
 1 - mkdocs
 2 - sphinx
@@ -39,7 +37,7 @@ Select license:
 3 - GNU GPL v3.0
 4 - Apache Software License 2.0
 5 - Mozilla Public License 2.0
-Choose from 1, 2, 3, 4, 5 [1]: 
+Choose from 1, 2, 3, 4, 5 [1]:
 
 INFO:post_gen_project:Initializing docs for mkdocs
 INFO:post_gen_project:Moving doc_sources/mkdocs/index.md to docs/index.md.
