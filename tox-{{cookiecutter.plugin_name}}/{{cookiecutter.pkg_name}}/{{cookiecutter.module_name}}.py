@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-
 import logging
 
-from tox import hookimpl
+import pluggy
+
+hookimpl = pluggy.HookimplMarker("tox")
 
 log = logging.getLogger('{{cookiecutter.plugin_name}}')
 
