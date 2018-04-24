@@ -28,6 +28,7 @@ setup(
     license='{{cookiecutter.license}}',
     classifiers=[
         'Development Status :: 4 - Beta',
+        'Framework :: tox',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Testing',
         'Programming Language :: Python',
