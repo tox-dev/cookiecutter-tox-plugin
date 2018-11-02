@@ -130,7 +130,7 @@ plugin is free and open source software
   [docs_badge]: https://readthedocs.org/projects/cookiecutter-tox-plugin/badge/?version=latest
   [documentation]: https://cookiecutter-tox-plugin.readthedocs.io/en/latest/ (Documentation)
   [Cookiecutter]: https://github.com/audreyr/cookiecutter
-  [pytest]: https://github.com/pytest-dev/pytest
+  [pytest]: https://docs.pytest.org
   [PyPI]: https://pypi.org
   [tox]: https://tox.readthedocs.io/en/latest/
   [Submit a Plugin]: https://github.com/tox-dev/tox/blob/master/CONTRIBUTING.rst#submitting-plugins-to-tox-dev
