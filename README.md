@@ -72,7 +72,7 @@ tox-awesome/
 ## Features
 
 - Installable [PyPI] package featuring a `setup.py`.
-- Test suite running [tox] and [Pytest] that makes sure your plugin is working as expected
+- Test suite running [tox] and [pytest] that makes sure your plugin is working as expected
 - Comprehensive `README.rst` file that contains useful information about your
   plugin
 - Continuous integration configuration for [Travis CI] and [AppVeyor]
@@ -130,7 +130,7 @@ plugin is free and open source software
   [docs_badge]: https://readthedocs.org/projects/cookiecutter-tox-plugin/badge/?version=latest
   [documentation]: https://cookiecutter-tox-plugin.readthedocs.io/en/latest/ (Documentation)
   [Cookiecutter]: https://github.com/audreyr/cookiecutter
-  [Pytest]: https://github.com/tox-dev/pytest
+  [pytest]: https://github.com/tox-dev/pytest
   [PyPI]: https://pypi.org
   [tox]: https://tox.readthedocs.io/en/latest/
   [Submit a Plugin]: https://github.com/tox-dev/tox/blob/master/CONTRIBUTING.rst#submitting-plugins-to-tox-dev
