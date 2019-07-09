@@ -6,7 +6,7 @@ theme: readthedocs
 
 repo_url: https://github.com/tox-dev/cookiecutter-tox-plugin
 
-pages:
+nav:
 - Home: index.md
 - User Guide:
     - Quickstart: user-guide/quickstart.md

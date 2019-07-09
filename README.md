@@ -59,11 +59,11 @@ tox-awesome/
 ├── MANIFEST.in
 ├── README.rst
 ├── docs
-│   └── index.md
+│   └── index.md
 ├── setup.py
 ├── tests
-│   ├── conftest.py
-│   └── test_tox_awesome.py
+│   ├── conftest.py
+│   └── test_tox_awesome.py
 └── tox_awesome
     ├── __init__.py
     └── plugin.py
