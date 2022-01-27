@@ -34,16 +34,15 @@ or markdown formats.
 Cookiecutter prompts you for information regarding your plugin based on aforementioned variables:
 
 ```no-highlight
-full_name [Oliver Bestwalter]: Somebody Else
-email [oliver@bestwalter.de]: somebody@elsewhere.com
-github_username [obestwalter]: somebody_else
-plugin_name [foobar]: awesome
-pkg_name [tox_foobar]:
+full_name: Somebody Else
+email: somebody@elsewhere.com
+github_username: somebody_else
+plugin_name: awesome
+pkg_name [tox_awesome]:
 module_name [plugin]:
-entry_point [tox_foobar.plugin]:
+entry_point [tox_awesome.plugin]:
 short_description [A simple plugin to use with tox]:
-version [0.1.0]:
-tox_version [3.0.0]:
+tox_version [3.12.2]:
 Select docs_tool:
 1 - mkdocs
 2 - sphinx
@@ -59,10 +58,11 @@ Choose from 1, 2, 3, 4, 5 [1]:
 
 INFO:post_gen_project:Initializing docs for mkdocs
 INFO:post_gen_project:Moving doc_sources/mkdocs/index.md to docs/index.md.
-INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to /home/ob/do/tox-dev/tox-foobar/mkdocs.yml.
+INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to mkdocs.yml.
 INFO:post_gen_project:Remove temporary folder: doc_sources
 INFO:post_gen_project:Remove temporary folder: licenses
-INFO:post_gen_project:Remove temporary folder: macros
+Initialized empty Git repository in /home/ob/do/tox-dev/tox-awesome/.git/
+[master (root-commit) abc1d23] initialize tox-awesome
 ```
 
 The values in the square brackets (f.i. ``[foobar]``) are defaults for the according variables.
@@ -72,6 +72,32 @@ The values in the square brackets (f.i. ``[foobar]``) are defaults for the accor
 Once you answered the questions, Cookiecutter renders the the project:
 
 ```no-highlight
+tox-awesome/
+├── azure-pipelines.yml
+├── docs
+│   └── index.md
+├── .git
+├── .gitignore
+├── LICENSE
+├── MANIFEST.in
+├── .pre-commit-config.yaml
+├── pyproject.toml
+├── README.md
+├── readthedocs.yml
+├── setup.cfg
+├── setup.py
+├── src
+│   └── tox_awesome
+│       ├── __init__.py
+│       └── plugin.py
+├── tests
+│   ├── conftest.py
+│   ├── integration
+│   │   └── test_tox_tox_awesome_int.py
+│   └── unit
+│       ├── test_tox_tox_awesome.py
+│       └── test_version.py
+└── tox.ini
 tox-awesome/
 ├── tox.ini
 ├── .travis.yml

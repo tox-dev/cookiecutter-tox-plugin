@@ -16,16 +16,15 @@ $ cookiecutter https://github.com/tox-dev/cookiecutter-tox-plugin
 Cookiecutter prompts you for information regarding your plugin:
 
 ```no-highlight
-full_name [Oliver Bestwalter]: Somebody Else
-email [oliver@bestwalter.de]: somebody@elsewhere.com
-github_username [obestwalter]: somebody_else
-plugin_name [foobar]: awesome
-pkg_name [tox_foobar]:
+full_name: Somebody Else
+email: somebody@elsewhere.com
+github_username: somebody_else
+plugin_name: awesome
+pkg_name [tox_awesome]:
 module_name [plugin]:
-entry_point [tox_foobar.plugin]:
+entry_point [tox_awesome.plugin]:
 short_description [A simple plugin to use with tox]:
-version [0.1.0]:
-tox_version [3.0.0]:
+tox_version [3.12.2]:
 Select docs_tool:
 1 - mkdocs
 2 - sphinx
@@ -41,32 +40,42 @@ Choose from 1, 2, 3, 4, 5 [1]:
 
 INFO:post_gen_project:Initializing docs for mkdocs
 INFO:post_gen_project:Moving doc_sources/mkdocs/index.md to docs/index.md.
-INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to /home/ob/do/tox-dev/tox-foobar/mkdocs.yml.
+INFO:post_gen_project:Moving doc_sources/mkdocs/mkdocs.yml to mkdocs.yml.
 INFO:post_gen_project:Remove temporary folder: doc_sources
 INFO:post_gen_project:Remove temporary folder: licenses
-INFO:post_gen_project:Remove temporary folder: macros
+Initialized empty Git repository in /home/ob/do/tox-dev/tox-awesome/.git/
+[master (root-commit) abc1d23] initialize tox-awesome
 ```
 
 There you go - you just created a minimal tox plugin:
 
 ```no-highlight
 tox-awesome/
-├── tox.ini
-├── .travis.yml
-├── appveyor.yml
-├── mkdocs.yml
-├── LICENSE
-├── MANIFEST.in
-├── README.rst
+├── azure-pipelines.yml
 ├── docs
 │   └── index.md
+├── .git
+├── .gitignore
+├── LICENSE
+├── MANIFEST.in
+├── .pre-commit-config.yaml
+├── pyproject.toml
+├── README.md
+├── readthedocs.yml
+├── setup.cfg
 ├── setup.py
+├── src
+│   └── tox_awesome
+│       ├── __init__.py
+│       └── plugin.py
 ├── tests
 │   ├── conftest.py
-│   └── test_tox_awesome.py
-└── tox_awesome
-    ├── __init__.py
-    └── plugin.py
+│   ├── integration
+│   │   └── test_tox_tox_awesome_int.py
+│   └── unit
+│       ├── test_tox_tox_awesome.py
+│       └── test_version.py
+└── tox.ini
 ```
 
 ## Features
@@ -75,7 +84,7 @@ tox-awesome/
 - Test suite running [tox] and [pytest] that makes sure your plugin is working as expected
 - Comprehensive `README.rst` file that contains useful information about your
   plugin
-- Continuous integration configuration for [Travis CI] and [AppVeyor]
+- Continuous integration configuration for [Azure Pipelines]
 - Optional documentation with either [Sphinx] or [MkDocs]
 - Choose from several licenses, such as [MIT], [BSD-3], [Apache v2.0], [GNU GPL v3.0], or [MPL v2.0]
 
@@ -144,8 +153,7 @@ plugin is free and open source software
   [BSD-3]: http://opensource.org/licenses/BSD-3-Clause
   [GNU GPL v3.0]: http://www.gnu.org/licenses/gpl-3.0.txt
   [Apache v2.0]: http://www.apache.org/licenses/LICENSE-2.0
-  [Travis CI]: https://travis-ci.com/
-  [AppVeyor]: http://www.appveyor.com/
+  [Azure Pipelines]: https://azure.microsoft.com/fr-fr/services/devops/pipelines/
   [PyPA Code of Conduct]: https://www.pypa.io/en/latest/code-of-conduct/
   [Shortbread]: https://github.com/audreyr/cookiecutter/releases/tag/1.4.0
   [osi_certified]: https://opensource.org/trademarks/osi-certified/web/osi-certified-120x100.png
