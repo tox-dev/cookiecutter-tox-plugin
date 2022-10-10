@@ -11,9 +11,9 @@ ROOT = Path(__file__).absolute().parents[1]
 def test_run_cookiecutter_and_plugin_tests(cookies, monkeypatch, call_subprocess):
     """Create a new plugin via cookiecutter and run its tests."""
     monkeypatch.chdir(ROOT)
-    monkeypatch.setenv(str("GIT_COMMITTER_NAME"), str("committer joe"))
-    monkeypatch.setenv(str("GIT_AUTHOR_NAME"), str("author joe"))
-    monkeypatch.setenv(str("EMAIL"), str("joe@magic.com"))
+    monkeypatch.setenv("GIT_COMMITTER_NAME", "committer joe")
+    monkeypatch.setenv("GIT_AUTHOR_NAME", "author joe")
+    monkeypatch.setenv("EMAIL", "joe@magic.com")
 
     result = cookies.bake(
         extra_context={
@@ -59,7 +59,7 @@ def test_run_cookiecutter_and_plugin_tests(cookies, monkeypatch, call_subprocess
     }
     envs = current_envs(call_subprocess, project)
     cmd = [str(Path(sys.executable).parent / "tox"), "-vve", ",".join(envs)]
-    monkeypatch.setenv(str("DIFF_AGAINST"), str("master"))
+    monkeypatch.setenv("DIFF_AGAINST", "master")
     call_subprocess(cmd, cwd=str(project))
 
 
@@ -84,7 +84,7 @@ def current_envs(call_subprocess, project):
     code, out, _ = call_subprocess(cmd, allow_fail=True, cwd=str(project))
     assert code == 0
     parser = ConfigParser()
-    parser.read_string(six.text_type(out))
+    parser.read_string(str(out))
     envs = [
         n
         for n, e in (
